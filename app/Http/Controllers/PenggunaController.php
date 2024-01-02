@@ -22,9 +22,9 @@ class PenggunaController extends Controller
             $data = $this->extractData($request->data);
 
             $pengguna = new Pengguna;
-            $pengguna->name = strtoupper(trim($data['nama']));
+            $pengguna->name = trim($data['nama']);
             $pengguna->age = $data['usia'];
-            $pengguna->city = strtoupper(trim($data['kota']));
+            $pengguna->city = trim($data['kota']);
             $pengguna->created_at = now();
             $pengguna->save();
 
